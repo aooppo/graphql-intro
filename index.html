@@ -363,7 +363,7 @@ var ProductType = new GraphQLObjectType({
 @Component
 public class TestService { 
         @QueryMethod("bookById")
-        Map<String, String> getBookById(@QueryField("id") String id) {
+        Map getBookById(@QueryField("id") String id) {
             return books
                         .stream()
                         .filter(book -> book.get("id").equals(id))
