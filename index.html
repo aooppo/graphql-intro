@@ -359,18 +359,18 @@ var ProductType = new GraphQLObjectType({
           <h2>Example: Java</h2>
           
           <pre><code data-trim contenteditable class="java">
-            @Query
-            @Component
-            public class TestService { 
-                    @QueryMethod("bookById")
-                    Map<String, String> getBookById(@QueryField("id") String id) {
-                        return books
-                                    .stream()
-                                    .filter(book -> book.get("id").equals(id))
-                                    .findFirst()
-                                    .orElse(null);
-                    }
-            }
+@Query
+@Component
+public class TestService { 
+        @QueryMethod("bookById")
+        Map<String, String> getBookById(@QueryField("id") String id) {
+            return books
+                        .stream()
+                        .filter(book -> book.get("id").equals(id))
+                        .findFirst()
+                        .orElse(null);
+        }
+}
           </code></pre>
 
           <pre class="fragment roll-in" data-fragment-index="1"><code data-trim contenteditable class="java">
